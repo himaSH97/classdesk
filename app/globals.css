@@ -1,26 +1,331 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* App surface: a soft warm gray behind the frosted panels */
+  --app-bg: #e9e8e4;
+  --app-fg: #18181b;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /*
+    Concentric radii (Apple's rule): a nested shape's radius = parent radius - gap.
+    Set the base values; the derived ones keep every nested corner parallel.
+  */
+  --radius-header: 0.875rem; /* 14px: the floating header bar */
+  --shell-gap: 1rem; /* 16px: header margin inside the content card (matches p-4) */
+  --header-pad: 0.5rem; /* 8px: even padding around the header's buttons */
+  --header-border: 1px; /* matches the header's `border` class; counted in the gap to its buttons */
+  --radius-shell: calc(var(--radius-header) + var(--shell-gap)); /* 30px content card */
+  --radius-header-item: calc(
+    var(--radius-header) - var(--header-pad) - var(--header-border)
+  ); /* 5px buttons */
+}
+
+/*
+  Type scale, tuned the way Apple tunes San Francisco:
+  - a fixed set of steps, picked by role rather than by eye;
+  - letter-spacing tightens as size grows (large text stays crisp) and opens
+    slightly at the small end (small text stays legible);
+  - nothing smaller than 11px.
+  Roles: 2xl page title · xl/lg section heading · base emphasis · sm body ·
+  xs secondary/caption · 2xs smallest labels (badges, tiles, initials).
+  These override Tailwind's defaults, so shadcn components follow them too.
+*/
+@theme {
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-2xs--line-height: 1rem;
+  --text-2xs--letter-spacing: 0.01em;
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-xs--line-height: 1rem;
+  --text-xs--letter-spacing: 0.005em;
+
+  --text-sm: 0.875rem; /* 14px */
+  --text-sm--line-height: 1.25rem;
+  --text-sm--letter-spacing: -0.006em;
+
+  --text-base: 1rem; /* 16px */
+  --text-base--line-height: 1.5rem;
+  --text-base--letter-spacing: -0.011em;
+
+  --text-lg: 1.0625rem; /* 17px */
+  --text-lg--line-height: 1.5rem;
+  --text-lg--letter-spacing: -0.014em;
+
+  --text-xl: 1.25rem; /* 20px */
+  --text-xl--line-height: 1.75rem;
+  --text-xl--letter-spacing: -0.017em;
+
+  --text-2xl: 1.5rem; /* 24px */
+  --text-2xl--line-height: 2rem;
+  --text-2xl--letter-spacing: -0.021em;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-app-bg: var(--app-bg);
+  --color-app-fg: var(--app-fg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-heading: var(--font-geist-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ---------- View transitions: list density switch (all list pages) ---------- */
+/* .row-morph = each row card, .row-labels-morph = the column label row.
+   Rows opt in with a named <ViewTransition update="row-morph"> + data-morph-row. */
+
+/* Each box smoothly resizes/moves to its new layout. */
+::view-transition-group(.row-morph),
+::view-transition-group(.row-labels-morph) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Draw the card surface on the morphing box itself, so the card stays solid
+   while it resizes and only its contents swap. Matches Card: bg-card, rounded-xl,
+   ring-1 ring-foreground/10. */
+::view-transition-group(.row-morph) {
+  border-radius: calc(var(--radius) * 1.4);
+  background: var(--card);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--foreground) 10%, transparent);
+}
+
+/* Clip the snapshots to that box so contents are cropped/revealed as it
+   resizes, instead of being stretched to fit. */
+::view-transition-image-pair(.row-morph),
+::view-transition-image-pair(.row-labels-morph) {
+  overflow: clip;
+  border-radius: calc(var(--radius) * 1.4);
+}
+::view-transition-old(.row-morph),
+::view-transition-new(.row-morph),
+::view-transition-old(.row-labels-morph),
+::view-transition-new(.row-labels-morph) {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: left top;
+}
+/* Keep the card's own outline out of the snapshots (the morphing box above draws
+   it). Otherwise the smaller layout's outline shows as a stray line inside the
+   box mid-resize. Only applies while a view transition is running. */
+:active-view-transition-type(list-density) [data-morph-row] {
+  box-shadow: none;
+}
+
+/* Staggered fade: old content leaves quickly, then new content arrives, so the
+   two layouts never sit on top of each other as a double image. */
+::view-transition-old(.row-morph),
+::view-transition-old(.row-labels-morph) {
+  animation-duration: 120ms;
+}
+::view-transition-new(.row-morph),
+::view-transition-new(.row-labels-morph) {
+  animation-duration: 200ms;
+  animation-delay: 100ms;
+}
+
+/* Clicks during the animation go to the live page, not the overlay. */
+::view-transition {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
+
+/* ---------- View transitions: filter tabs (all list pages) ---------- */
+/* Rows that stay slide to their new position; rows that leave fade out quickly;
+   rows that arrive fade in with a slight rise, just after the exits. */
+
+::view-transition-group(.row-move) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(.row-exit):only-child {
+  animation: row-exit 140ms ease-in both;
+}
+::view-transition-new(.row-enter):only-child {
+  animation: row-enter 260ms cubic-bezier(0.2, 0, 0, 1) 80ms both;
+}
+
+@keyframes row-exit {
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+@keyframes row-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* Arriving rows appear one by one: each step adds 40ms (80ms base, after the
+   exits). Keep in sync with STAGGER_STEPS in components/dashboard/list-parts.tsx. */
+::view-transition-new(.stagger-0):only-child {
+  animation-delay: 80ms;
+}
+::view-transition-new(.stagger-1):only-child {
+  animation-delay: 120ms;
+}
+::view-transition-new(.stagger-2):only-child {
+  animation-delay: 160ms;
+}
+::view-transition-new(.stagger-3):only-child {
+  animation-delay: 200ms;
+}
+::view-transition-new(.stagger-4):only-child {
+  animation-delay: 240ms;
+}
+::view-transition-new(.stagger-5):only-child {
+  animation-delay: 280ms;
+}
+::view-transition-new(.stagger-6):only-child {
+  animation-delay: 320ms;
+}
+::view-transition-new(.stagger-7):only-child {
+  animation-delay: 360ms;
+}
+::view-transition-new(.stagger-8):only-child {
+  animation-delay: 400ms;
+}
+::view-transition-new(.stagger-9):only-child {
+  animation-delay: 440ms;
 }

@@ -1,0 +1,24 @@
+[
+  { "id": "asg-13", "classId": "cls-302", "title": "Unit 3 test: Functions", "type": "exam", "assignedDate": "2026-10-30", "dueDate": "2026-11-06", "maxPoints": 100, "submitted": 11, "graded": 11, "averageScore": 74 },
+  { "id": "asg-01", "classId": "cls-302", "title": "Quadratic equations worksheet", "type": "homework", "assignedDate": "2026-11-13", "dueDate": "2026-11-20", "maxPoints": 20, "submitted": 11, "graded": 11, "averageScore": 78 },
+  { "id": "asg-02", "classId": "cls-302", "title": "Polynomial functions quiz", "type": "quiz", "assignedDate": "2026-11-19", "dueDate": "2026-11-26", "maxPoints": 25, "submitted": 4, "graded": 0, "averageScore": null },
+  { "id": "asg-03", "classId": "cls-302", "title": "Logarithms problem set", "type": "homework", "assignedDate": "2026-11-23", "dueDate": "2026-12-04", "maxPoints": 20, "submitted": 1, "graded": 0, "averageScore": null },
+
+  { "id": "asg-14", "classId": "cls-303", "title": "Reading response: Chapter 5", "type": "homework", "assignedDate": "2026-11-12", "dueDate": "2026-11-19", "maxPoints": 10, "submitted": 10, "graded": 7, "averageScore": 84 },
+  { "id": "asg-04", "classId": "cls-303", "title": "Essay: The Great Gatsby", "type": "essay", "assignedDate": "2026-11-10", "dueDate": "2026-11-27", "maxPoints": 50, "submitted": 6, "graded": 0, "averageScore": null },
+  { "id": "asg-05", "classId": "cls-303", "title": "Poetry analysis", "type": "essay", "assignedDate": "2026-11-24", "dueDate": "2026-12-08", "maxPoints": 30, "submitted": 0, "graded": 0, "averageScore": null },
+
+  { "id": "asg-15", "classId": "cls-210", "title": "Lab report: Friction", "type": "lab", "assignedDate": "2026-11-04", "dueDate": "2026-11-11", "maxPoints": 40, "submitted": 12, "graded": 12, "averageScore": 81 },
+  { "id": "asg-16", "classId": "cls-210", "title": "Forces quiz", "type": "quiz", "assignedDate": "2026-11-16", "dueDate": "2026-11-23", "maxPoints": 25, "submitted": 11, "graded": 3, "averageScore": 70 },
+  { "id": "asg-06", "classId": "cls-210", "title": "Lab report: Newton's laws", "type": "lab", "assignedDate": "2026-11-18", "dueDate": "2026-11-25", "maxPoints": 40, "submitted": 8, "graded": 0, "averageScore": null },
+  { "id": "asg-07", "classId": "cls-210", "title": "Kinematics problem set", "type": "homework", "assignedDate": "2026-11-24", "dueDate": "2026-12-02", "maxPoints": 20, "submitted": 0, "graded": 0, "averageScore": null },
+
+  { "id": "asg-08", "classId": "cls-118", "title": "Research: Silk Road trade", "type": "project", "assignedDate": "2026-11-04", "dueDate": "2026-11-18", "maxPoints": 50, "submitted": 11, "graded": 11, "averageScore": 80 },
+  { "id": "asg-17", "classId": "cls-118", "title": "Primary sources worksheet", "type": "homework", "assignedDate": "2026-11-16", "dueDate": "2026-11-21", "maxPoints": 15, "submitted": 10, "graded": 0, "averageScore": null },
+  { "id": "asg-09", "classId": "cls-118", "title": "Timeline project", "type": "project", "assignedDate": "2026-11-20", "dueDate": "2026-12-11", "maxPoints": 60, "submitted": 0, "graded": 0, "averageScore": null },
+
+  { "id": "asg-10", "classId": "cls-401", "title": "Setup: development environment", "type": "homework", "assignedDate": "2026-11-20", "dueDate": "2027-01-12", "maxPoints": 10, "submitted": 2, "graded": 0, "averageScore": null },
+
+  { "id": "asg-11", "classId": "cls-205", "title": "Cell structure diagram", "type": "homework", "assignedDate": "2026-05-28", "dueDate": "2026-06-10", "maxPoints": 20, "submitted": 8, "graded": 8, "averageScore": 85 },
+  { "id": "asg-12", "classId": "cls-205", "title": "Final exam review", "type": "exam", "assignedDate": "2026-06-05", "dueDate": "2026-06-20", "maxPoints": 100, "submitted": 8, "graded": 8, "averageScore": 79 }
+]

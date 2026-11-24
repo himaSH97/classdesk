@@ -1,0 +1,80 @@
+[
+  {
+    "id": "conv-hana",
+    "studentId": "stu-07",
+    "unread": 1,
+    "messages": [
+      { "id": "m-hana-1", "from": "student", "sentAt": "2026-11-23T19:30", "text": "Hi! I finished reading Gatsby early. Could I write the essay on a different theme than the prompt?" },
+      { "id": "m-hana-2", "from": "teacher", "sentAt": "2026-11-23T20:02", "text": "Love that you're ahead. Which theme are you thinking about?" },
+      { "id": "m-hana-3", "from": "student", "sentAt": "2026-11-24T10:05", "text": "The green light as a symbol of the American Dream, and how its meaning changes by the end of the book." }
+    ]
+  },
+  {
+    "id": "conv-amir",
+    "studentId": "stu-01",
+    "unread": 2,
+    "messages": [
+      { "id": "m-amir-1", "from": "teacher", "sentAt": "2026-11-20T15:10", "text": "Hi Amir, I saw the quadratic equations worksheet was a tough one. Want to go over it together?" },
+      { "id": "m-amir-2", "from": "student", "sentAt": "2026-11-20T18:42", "text": "Yes please. I mixed up the formula on questions 4 and 5." },
+      { "id": "m-amir-3", "from": "teacher", "sentAt": "2026-11-21T08:05", "text": "No problem. I'm in B-204 at lunch on Monday and Wednesday. Bring the worksheet and we'll work through them." },
+      { "id": "m-amir-4", "from": "student", "sentAt": "2026-11-24T09:10", "text": "Thanks for Monday, that helped a lot." },
+      { "id": "m-amir-5", "from": "student", "sentAt": "2026-11-24T09:12", "text": "Is the polynomial functions quiz on Thursday open book?" }
+    ]
+  },
+  {
+    "id": "conv-priya",
+    "studentId": "stu-05",
+    "unread": 0,
+    "messages": [
+      { "id": "m-priya-1", "from": "student", "sentAt": "2026-11-22T11:15", "text": "For the development environment setup, should we install Python 3.12 or 3.13?" },
+      { "id": "m-priya-2", "from": "teacher", "sentAt": "2026-11-22T12:30", "text": "3.12 is fine, it's what the lab machines run. The setup guide in the class folder walks through each step." },
+      { "id": "m-priya-3", "from": "student", "sentAt": "2026-11-24T08:20", "text": "Got it working. Thanks!" }
+    ]
+  },
+  {
+    "id": "conv-noah",
+    "studentId": "stu-10",
+    "unread": 0,
+    "messages": [
+      { "id": "m-noah-1", "from": "student", "sentAt": "2026-11-23T17:05", "text": "For the Newton's laws lab report, do the force vs. acceleration graphs need error bars?" },
+      { "id": "m-noah-2", "from": "teacher", "sentAt": "2026-11-23T18:10", "text": "Yes, add error bars from your three trials using the standard deviation." },
+      { "id": "m-noah-3", "from": "student", "sentAt": "2026-11-23T18:14", "text": "Okay, will do." }
+    ]
+  },
+  {
+    "id": "conv-ali",
+    "studentId": "stu-02",
+    "unread": 0,
+    "messages": [
+      { "id": "m-ali-1", "from": "student", "sentAt": "2026-11-21T16:20", "text": "Hi, I've had a family situation this week. Could I get two extra days on the Gatsby essay?" },
+      { "id": "m-ali-2", "from": "teacher", "sentAt": "2026-11-21T17:45", "text": "I'm sorry to hear that, Ali. Yes, you can hand it in by Sunday, Nov 29. Let me know if you need anything else." },
+      { "id": "m-ali-3", "from": "student", "sentAt": "2026-11-21T17:52", "text": "Thank you so much, I really appreciate it." }
+    ]
+  },
+  {
+    "id": "conv-ethan",
+    "studentId": "stu-12",
+    "unread": 0,
+    "messages": [
+      { "id": "m-ethan-1", "from": "teacher", "sentAt": "2026-11-18T16:00", "text": "Hi Ethan, you've missed a few classes recently and I want to make sure you're okay. Can we find a time to talk this week?" },
+      { "id": "m-ethan-2", "from": "teacher", "sentAt": "2026-11-21T09:30", "text": "Just checking in again. The Silk Road research project is still open if you'd like to hand it in late." }
+    ]
+  },
+  {
+    "id": "conv-zara",
+    "studentId": "stu-17",
+    "unread": 0,
+    "messages": [
+      { "id": "m-zara-1", "from": "student", "sentAt": "2026-11-19T14:30", "text": "I was sick for the forces quiz review. Can I still take the quiz on Monday?" },
+      { "id": "m-zara-2", "from": "teacher", "sentAt": "2026-11-19T15:05", "text": "Of course. I'll leave the review notes on your desk tomorrow. Feel better!" }
+    ]
+  },
+  {
+    "id": "conv-ravi",
+    "studentId": "stu-23",
+    "unread": 0,
+    "messages": [
+      { "id": "m-ravi-1", "from": "teacher", "sentAt": "2026-11-16T13:00", "text": "Hi Ravi, I didn't see you in World History on Friday. Is everything alright? The primary sources worksheet is due Saturday." }
+    ]
+  }
+]

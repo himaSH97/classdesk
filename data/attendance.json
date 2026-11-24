@@ -1,0 +1,389 @@
+[
+  {
+    "id": "ses-302-11-09",
+    "classId": "cls-302",
+    "date": "2026-11-09",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"late"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"present"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-210-11-09",
+    "classId": "cls-210",
+    "date": "2026-11-09",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-15","status":"late"},
+      {"studentId":"stu-16","status":"present"},
+      {"studentId":"stu-17","status":"present"},
+      {"studentId":"stu-18","status":"late"},
+      {"studentId":"stu-19","status":"absent"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-28","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-303-11-10",
+    "classId": "cls-303",
+    "date": "2026-11-10",
+    "records": [
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-11","status":"present"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-26","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-302-11-11",
+    "classId": "cls-302",
+    "date": "2026-11-11",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-02","status":"absent"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"absent"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"late"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"present"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-118-11-11",
+    "classId": "cls-118",
+    "date": "2026-11-11",
+    "records": [
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-06","status":"late"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-20","status":"present"},
+      {"studentId":"stu-21","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-27","status":"absent"}
+    ]
+  },
+  {
+    "id": "ses-303-11-12",
+    "classId": "cls-303",
+    "date": "2026-11-12",
+    "records": [
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-11","status":"present"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-14","status":"absent"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-26","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-210-11-12",
+    "classId": "cls-210",
+    "date": "2026-11-12",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-10","status":"absent"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-16","status":"absent"},
+      {"studentId":"stu-17","status":"absent"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-23","status":"late"},
+      {"studentId":"stu-28","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-302-11-13",
+    "classId": "cls-302",
+    "date": "2026-11-13",
+    "records": [
+      {"studentId":"stu-01","status":"late"},
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-19","status":"absent"},
+      {"studentId":"stu-25","status":"absent"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-118-11-13",
+    "classId": "cls-118",
+    "date": "2026-11-13",
+    "records": [
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-06","status":"absent"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-12","status":"absent"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-20","status":"present"},
+      {"studentId":"stu-21","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-23","status":"late"},
+      {"studentId":"stu-27","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-302-11-16",
+    "classId": "cls-302",
+    "date": "2026-11-16",
+    "records": [
+      {"studentId":"stu-01","status":"absent"},
+      {"studentId":"stu-02","status":"late"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"absent"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"absent"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"absent"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"present"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-210-11-16",
+    "classId": "cls-210",
+    "date": "2026-11-16",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-16","status":"present"},
+      {"studentId":"stu-17","status":"absent"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-19","status":"late"},
+      {"studentId":"stu-23","status":"late"},
+      {"studentId":"stu-28","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-303-11-17",
+    "classId": "cls-303",
+    "date": "2026-11-17",
+    "records": [
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-11","status":"present"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-13","status":"late"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-26","status":"excused"}
+    ]
+  },
+  {
+    "id": "ses-302-11-18",
+    "classId": "cls-302",
+    "date": "2026-11-18",
+    "records": [
+      {"studentId":"stu-01","status":"late"},
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"absent"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-118-11-18",
+    "classId": "cls-118",
+    "date": "2026-11-18",
+    "records": [
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-06","status":"absent"},
+      {"studentId":"stu-09","status":"absent"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-14","status":"excused"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-20","status":"present"},
+      {"studentId":"stu-21","status":"absent"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-27","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-303-11-19",
+    "classId": "cls-303",
+    "date": "2026-11-19",
+    "records": [
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"late"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-09","status":"excused"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-11","status":"late"},
+      {"studentId":"stu-12","status":"absent"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-22","status":"excused"},
+      {"studentId":"stu-26","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-210-11-19",
+    "classId": "cls-210",
+    "date": "2026-11-19",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-16","status":"present"},
+      {"studentId":"stu-17","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-28","status":"absent"}
+    ]
+  },
+  {
+    "id": "ses-302-11-20",
+    "classId": "cls-302",
+    "date": "2026-11-20",
+    "records": [
+      {"studentId":"stu-01","status":"absent"},
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"present"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-118-11-20",
+    "classId": "cls-118",
+    "date": "2026-11-20",
+    "records": [
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-06","status":"present"},
+      {"studentId":"stu-09","status":"excused"},
+      {"studentId":"stu-12","status":"excused"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-20","status":"present"},
+      {"studentId":"stu-21","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-27","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-302-11-23",
+    "classId": "cls-302",
+    "date": "2026-11-23",
+    "records": [
+      {"studentId":"stu-01","status":"excused"},
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-05","status":"present"},
+      {"studentId":"stu-06","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-25","status":"present"},
+      {"studentId":"stu-30","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-210-11-23",
+    "classId": "cls-210",
+    "date": "2026-11-23",
+    "records": [
+      {"studentId":"stu-01","status":"present"},
+      {"studentId":"stu-04","status":"present"},
+      {"studentId":"stu-08","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-13","status":"present"},
+      {"studentId":"stu-15","status":"present"},
+      {"studentId":"stu-16","status":"present"},
+      {"studentId":"stu-17","status":"present"},
+      {"studentId":"stu-18","status":"present"},
+      {"studentId":"stu-19","status":"present"},
+      {"studentId":"stu-23","status":"present"},
+      {"studentId":"stu-28","status":"present"}
+    ]
+  },
+  {
+    "id": "ses-303-11-24",
+    "classId": "cls-303",
+    "date": "2026-11-24",
+    "records": [
+      {"studentId":"stu-02","status":"present"},
+      {"studentId":"stu-03","status":"present"},
+      {"studentId":"stu-07","status":"present"},
+      {"studentId":"stu-09","status":"present"},
+      {"studentId":"stu-10","status":"present"},
+      {"studentId":"stu-11","status":"present"},
+      {"studentId":"stu-12","status":"present"},
+      {"studentId":"stu-13","status":"late"},
+      {"studentId":"stu-14","status":"present"},
+      {"studentId":"stu-22","status":"present"},
+      {"studentId":"stu-26","status":"present"}
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "cls-302",
+    "name": "Algebra II",
+    "code": "MATH-302",
+    "subject": "Mathematics",
+    "grade": "Grade 10",
+    "room": "B-204",
+    "color": "violet",
+    "status": "active",
+    "schedule": { "days": ["Mon", "Wed", "Fri"], "start": "08:00", "end": "09:15" },
+    "attendanceRate": 0.94
+  },
+  {
+    "id": "cls-303",
+    "name": "English Literature",
+    "code": "ENG-303",
+    "subject": "English",
+    "grade": "Grade 10",
+    "room": "A-112",
+    "color": "amber",
+    "status": "active",
+    "schedule": { "days": ["Tue", "Thu"], "start": "09:30", "end": "11:00" },
+    "attendanceRate": 0.89
+  },
+  {
+    "id": "cls-210",
+    "name": "Physics Fundamentals",
+    "code": "PHY-210",
+    "subject": "Science",
+    "grade": "Grade 11",
+    "room": "Lab 3",
+    "color": "sky",
+    "status": "active",
+    "schedule": { "days": ["Mon", "Thu"], "start": "11:15", "end": "12:45" },
+    "attendanceRate": 0.91
+  },
+  {
+    "id": "cls-118",
+    "name": "World History",
+    "code": "HIS-118",
+    "subject": "History",
+    "grade": "Grade 9",
+    "room": "C-021",
+    "color": "rose",
+    "status": "active",
+    "schedule": { "days": ["Wed", "Fri"], "start": "13:30", "end": "14:45" },
+    "attendanceRate": 0.82
+  },
+  {
+    "id": "cls-401",
+    "name": "Intro to Programming",
+    "code": "CS-401",
+    "subject": "Computer Science",
+    "grade": "Grade 12",
+    "room": "Lab 1",
+    "color": "emerald",
+    "status": "upcoming",
+    "startDate": "2027-01-11",
+    "schedule": { "days": ["Tue", "Thu"], "start": "13:00", "end": "14:30" },
+    "attendanceRate": null
+  },
+  {
+    "id": "cls-205",
+    "name": "Biology",
+    "code": "BIO-205",
+    "subject": "Science",
+    "grade": "Grade 10",
+    "room": "Lab 2",
+    "color": "indigo",
+    "status": "archived",
+    "schedule": { "days": ["Mon", "Wed"], "start": "10:00", "end": "11:15" },
+    "attendanceRate": 0.87
+  }
+]
