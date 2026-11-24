@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Class Manager",
+  title: "ClassDesk",
   description: "Class, student, and assignment dashboard",
 };
 

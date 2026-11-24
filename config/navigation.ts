@@ -28,8 +28,8 @@ export interface NavSection {
 }
 
 export const brand = {
-  name: "Class Manager",
-  mark: "N",
+  name: "ClassDesk",
+  mark: "C",
 };
 
 export const navSections: NavSection[] = [
