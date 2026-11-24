@@ -262,6 +262,51 @@ body {
   }
 }
 
+/* ---------- View transitions: sidebar page navigation (slides) ---------- */
+/* Sidebar links tag the navigation nav-forward (down the list) or nav-back (up it).
+   app/(dashboard)/template.tsx maps those types to these classes. Old content slides
+   out one way while new content slides in from the other side. */
+::view-transition-old(.nav-forward) {
+  --slide-offset: -60px;
+  animation:
+    150ms ease-in both page-fade reverse,
+    400ms ease-in-out both page-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 60px;
+  animation:
+    210ms ease-out 150ms both page-fade,
+    400ms ease-in-out both page-slide;
+}
+::view-transition-old(.nav-back) {
+  --slide-offset: 60px;
+  animation:
+    150ms ease-in both page-fade reverse,
+    400ms ease-in-out both page-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -60px;
+  animation:
+    210ms ease-out 150ms both page-fade,
+    400ms ease-in-out both page-slide;
+}
+@keyframes page-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes page-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+
 /* ---------- View transitions: filter tabs (all list pages) ---------- */
 /* Rows that stay slide to their new position; rows that leave fade out quickly;
    rows that arrive fade in with a slight rise, just after the exits. */

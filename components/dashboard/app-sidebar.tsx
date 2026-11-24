@@ -135,12 +135,34 @@ export function AppSidebar() {
   );
 }
 
+// Every sidebar link in display order, so moving down the list slides content one way and moving up slides it the other.
+const navOrder = [...navSections.flatMap((section) => section.items), ...navFooter];
+
+function navIndex(pathname: string) {
+  return navOrder.findIndex((i) =>
+    i.href === "/" ? pathname === "/" : pathname === i.href || pathname.startsWith(`${i.href}/`)
+  );
+}
+
 function NavMenuItem({ item, active }: { item: NavItem; active: boolean }) {
   const Icon = iconMap[item.icon];
+  const pathname = usePathname();
+  const { state } = useSidebar();
+  const collapsed = state === "collapsed";
+  const transitionTypes = navOrder.findIndex((i) => i.id === item.id) < navIndex(pathname) ? ["nav-back"] : ["nav-forward"];
 
   return (
     <SidebarMenuItem>
-      <SidebarMenuButton render={<Link href={item.href} />} isActive={active} tooltip={item.label}>
+      {/* The active item uses the button's own active background. A morphing view-transition pill
+          was tried, but the browser draws transition overlays above the page, so the solid color
+          covered the icon and label while it slid. */}
+      <SidebarMenuButton
+        render={<Link href={item.href} transitionTypes={transitionTypes} />}
+        isActive={active}
+        // No base-ui tooltip here: its hover handling calls flushSync on click, which cancels the
+        // page view transition. On the collapsed rail the label is a native title instead.
+        title={collapsed ? item.label : undefined}
+      >
         <Icon />
         <span>{item.label}</span>
       </SidebarMenuButton>
