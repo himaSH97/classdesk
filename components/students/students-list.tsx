@@ -108,7 +108,8 @@ export function StudentsList({
 
   return (
     <section className="flex flex-col gap-4">
-      <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+      {/* Sticky: the toolbar stays pinned at the top while the list scrolls beneath it. */}
+      <div className="sticky top-0 z-20 -mx-4 -mt-4 flex flex-col gap-3 bg-white px-4 pt-4 pb-3 xl:flex-row xl:items-center xl:justify-between">
         <div className="max-w-full overflow-x-auto">
           <FilterTabs
             options={filters}
