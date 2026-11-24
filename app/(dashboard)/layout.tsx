@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <AppSidebar />
         
         {/* Outer radius = header radius + header margin, so the corners are concentric. */}
-        <SidebarInset className="md:peer-data-[variant=inset]:rounded-(--radius-shell)">
+        <SidebarInset className="md:peer-data-[variant=inset]:rounded-(--radius-shell) bg-white">
           
           {/* The header needs the student list for the switcher on student pages. */}
           <SiteHeader studentDirectory={getStudentDirectory()} />

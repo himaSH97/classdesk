@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview — Amber Accent</title>
+<style>
+  :root {
+    --linen: #F1ECE3;
+    --navy: #14213D;
+    --amber: #FFB020;
+    --white: #FFFFFF;
+    --navy-70: rgba(20, 33, 61, 0.72);
+    --navy-55: rgba(20, 33, 61, 0.56);
+    --navy-12: rgba(20, 33, 61, 0.12);
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--navy);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px; line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 1120px; margin: 0 auto; padding: 28px 16px 56px; }
+
+  /* Header row with a single amber rule */
+  .top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding-bottom: 18px; margin-bottom: 22px; border-bottom: 2px solid var(--navy);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; }
+  .mark {
+    width: 30px; height: 30px; border-radius: 9px; background: var(--amber); color: var(--navy);
+    display: grid; place-items: center; font-weight: 800;
+  }
+  .nav { display: flex; gap: 2px; flex-wrap: wrap; }
+  .nav a {
+    color: var(--navy-70); text-decoration: none; padding: 6px 10px; border-radius: 999px; font-weight: 500;
+  }
+  .nav a:hover { color: var(--navy); background: var(--linen); }
+  .nav a.active { background: var(--amber); color: var(--navy); font-weight: 600; }
+
+  header.page-head {
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;
+  }
+  h1 { font-size: 26px; letter-spacing: -0.02em; margin: 0 0 4px; }
+  .sub { color: var(--navy-55); margin: 0; }
+  .btn {
+    background: var(--amber); color: var(--navy); border: 0; border-radius: 999px;
+    padding: 10px 18px; font-weight: 700; font-size: 14px; cursor: pointer;
+  }
+
+  /* Stat row: the first tile is a navy hero, the alert tile is amber */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+  .stat { background: var(--linen); border-radius: var(--radius); padding: 18px; }
+  .stat .label { color: var(--navy-70); font-size: 13px; font-weight: 500; }
+  .stat .value { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; margin: 6px 0 2px; font-variant-numeric: tabular-nums; }
+  .stat .hint { color: var(--navy-55); font-size: 12px; }
+  .stat.hero { background: var(--navy); color: var(--white); }
+  .stat.hero .label, .stat.hero .hint { color: rgba(255,255,255,0.7); }
+  .stat.alert { background: var(--amber); }
+  .stat.alert .label, .stat.alert .hint { color: var(--navy); }
+  .stat.alert .hint { opacity: 0.8; }
+
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 16px; align-items: start; }
+  .col { display: flex; flex-direction: column; gap: 16px; }
+  .card { background: var(--linen); border-radius: var(--radius); padding: 6px; }
+  .card-head {
+    display: flex; align-items: center; justify-content: space-between; padding: 12px 12px 10px;
+  }
+  .card-head h2 { font-size: 16px; margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+  .card-head a { color: var(--navy); font-size: 12px; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--amber); }
+  .card-head .count { color: var(--navy-55); font-size: 12px; }
+  .panel { background: var(--white); border-radius: 12px; overflow: hidden; }
+  ul.list { list-style: none; margin: 0; padding: 0; }
+  ul.list li + li { border-top: 1px solid var(--navy-12); }
+  .row {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-decoration: none;
+  }
+  .row:hover { background: var(--linen); }
+  .time { width: 56px; font-weight: 700; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .tile {
+    width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+    background: var(--linen); color: var(--navy); font-size: 11px; font-weight: 800; flex-shrink: 0;
+  }
+  .tile.hot { background: var(--amber); }
+  .grow { min-width: 0; flex: 1; }
+  .truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .title { font-weight: 600; }
+  .meta { color: var(--navy-55); font-size: 12px; }
+
+  .badge {
+    font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    background: var(--linen); color: var(--navy);
+  }
+  .badge.warn { background: var(--amber); color: var(--navy); }
+  .badge.ok { background: var(--navy); color: var(--white); }
+
+  .progress { height: 6px; border-radius: 999px; background: var(--linen); overflow: hidden; }
+  .progress span { display: block; height: 100%; background: var(--navy); border-radius: inherit; }
+  .progress.soon span { background: var(--amber); }
+
+  .avatar {
+    width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--linen); color: var(--navy); font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+  .unread {
+    min-width: 22px; height: 22px; padding: 0 7px; border-radius: 999px; background: var(--amber); color: var(--navy);
+    font-size: 11px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat { padding: 14px; }
+    .stat .value { font-size: 26px; }
+    .nav { display: none; }
+    .due-meta { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="brand"><span class="mark">N</span> Class Manager</div>
+    <nav class="nav" aria-label="Main">
+      <a class="active" href="#">Overview</a>
+      <a href="#">Classes</a>
+      <a href="#">Students</a>
+      <a href="#">Assignments</a>
+      <a href="#">Sessions</a>
+      <a href="#">Calendar</a>
+      <a href="#">Messages</a>
+    </nav>
+  </div>
+
+  <header class="page-head">
+    <div>
+      <h1>Overview</h1>
+      <p class="sub">Tuesday, November 24 · Fall 2026</p>
+    </div>
+    <button class="btn">Record attendance</button>
+  </header>
+
+  <section class="stats">
+    <div class="stat hero">
+      <div class="label">Classes today</div>
+      <div class="value">3</div>
+      <div class="hint">next at 09:30</div>
+    </div>
+    <div class="stat">
+      <div class="label">Due this week</div>
+      <div class="value">5</div>
+      <div class="hint">in the next 7 days</div>
+    </div>
+    <div class="stat">
+      <div class="label">Unread messages</div>
+      <div class="value">4</div>
+      <div class="hint">from students</div>
+    </div>
+    <div class="stat alert">
+      <div class="label">Need attention</div>
+      <div class="value">3</div>
+      <div class="hint">low attendance or struggling</div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="col">
+      <section class="card">
+        <div class="card-head">
+          <h2>Today</h2>
+          <span class="count">3 classes</span>
+        </div>
+        <div class="panel">
+          <ul class="list">
+            <li>
+              <a class="row" href="#">
+                <span class="time">09:30</span>
+                <span class="tile hot">ENG</span>
+                <span class="grow">
+                  <span class="title truncate">English Literature</span>
+                  <span class="meta truncate">A-112 · 09:30–11:00</span>
+                </span>
+                <span class="badge">Upcoming</span>
+              </a>
+            </li>
+            <li>
+              <a class="row" href="#">
+                <span class="time">11:15</span>
+                <span class="tile">210</span>
+                <span class="grow">
+                  <span class="title truncate">Physics Fundamentals</span>
+                  <span class="meta truncate">C-301 · 11:15–12:30</span>
+                </span>
+                <span class="badge ok">24/26 present</span>
+              </a>
+            </li>
+            <li>
+              <a class="row" href="#">
+                <span class="time">14:00</span>
+                <span class="tile">118</span>
+                <span class="grow">
+                  <span class="title truncate">Chemistry Lab</span>
+                  <span class="meta truncate">Lab 2 · 14:00–15:30</span>
+                </span>
+                <span class="badge warn">2 absent</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Due soon</h2>
+          <a href="#">All assignments</a>
+        </div>
+        <div class="panel">
+          <ul class="list">
+            <li>
+              <div class="row">
+                <span class="tile hot">HW</span>
+                <span class="grow">
+                  <span class="title truncate">Quadratic equations worksheet</span>
+                  <span class="meta truncate">MATH-302 · Homework</span>
+                </span>
+                <span class="due-meta" style="width:140px">
+                  <span class="progress soon" style="display:block"><span style="width:72%"></span></span>
+                  <span class="meta" style="display:block;margin-top:4px">8/11 submitted</span>
+                </span>
+                <span class="badge warn">Tomorrow</span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="tile">EX</span>
+                <span class="grow">
+                  <span class="title truncate">Unit 3 test: Functions</span>
+                  <span class="meta truncate">MATH-302 · Exam</span>
+                </span>
+                <span class="due-meta" style="width:140px">
+                  <span class="progress" style="display:block"><span style="width:100%"></span></span>
+                  <span class="meta" style="display:block;margin-top:4px">11/11 graded</span>
+                </span>
+                <span class="badge">Dec 2</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="col">
+      <section class="card">
+        <div class="card-head">
+          <h2>Needs attention</h2>
+          <a href="#">All students</a>
+        </div>
+        <div class="panel">
+          <ul class="list">
+            <li>
+              <a class="row" href="#">
+                <span class="avatar">AB</span>
+                <span class="grow">
+                  <span class="title truncate">Amir Baghian</span>
+                  <span class="meta truncate">Grade 10 · 78% attendance</span>
+                </span>
+                <span class="badge warn">Low attendance</span>
+              </a>
+            </li>
+            <li>
+              <a class="row" href="#">
+                <span class="avatar">AM</span>
+                <span class="grow">
+                  <span class="title truncate">Ali Malekkhatabi</span>
+                  <span class="meta truncate">Grade 10 · 81% attendance</span>
+                </span>
+                <span class="badge">Struggling</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Messages</h2>
+          <a href="#">Open inbox</a>
+        </div>
+        <div class="panel">
+          <ul class="list">
+            <li>
+              <a class="row" href="#">
+                <span class="avatar">HJ</span>
+                <span class="grow">
+                  <span class="title truncate">Hana Jafari</span>
+                  <span class="meta truncate">Could I write on a different theme?</span>
+                </span>
+                <span class="unread">1</span>
+              </a>
+            </li>
+            <li>
+              <a class="row" href="#">
+                <span class="avatar">OR</span>
+                <span class="grow">
+                  <span class="title truncate">Omid Rezaei</span>
+                  <span class="meta truncate">You: Sent the revised schedule.</span>
+                </span>
+                <span class="meta">Yesterday</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

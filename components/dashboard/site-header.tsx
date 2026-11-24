@@ -33,11 +33,12 @@ export function SiteHeader({ studentDirectory }: { studentDirectory: StudentDire
   const sessionLabel = sessionId ? studentDirectory.sessions.find((s) => s.id === sessionId)?.label : undefined;
 
   return (
-    // Floating bar: side margins match the content's p-4 so it lines up with the
-    // cards below; sticky + translucent background gives the frosted-glass effect.
-    // Radii are concentric (see --radius-* in globals.css): header padding is an
-    // even --header-pad so its buttons can use radius-header minus that padding.
-    <header className="sticky top-2 z-10 mx-(--shell-gap) mt-(--shell-gap) flex shrink-0 items-center gap-2 rounded-(--radius-header) border bg-background/80 p-(--header-pad) shadow-xs backdrop-blur-md">
+    // Floating primary-colored bar. Side margins match
+    // the content's p-4 so it lines up with the cards below. Children (breadcrumb
+    // links, switchers, icon buttons) are re-colored for the dark background via the
+    // [&_...] selectors. Radii are concentric (see --radius-* in globals.css): header
+    // padding is an even --header-pad so its buttons can use radius-header minus that padding.
+    <header className="sticky top-2 z-10 border border-border bg-white mx-(--shell-gap) mt-(--shell-gap) flex shrink-0 items-center gap-2 rounded-(--radius-header) p-(--header-pad) text-foreground [&_a]:text-muted-foreground [&_a:hover]:text-foreground [&_[data-slot=breadcrumb-page]]:text-foreground [&_[data-slot=breadcrumb-separator]]:text-muted-foreground [&_button]:text-foreground [&_button:hover]:bg-foreground/10 [&_button:hover]:text-foreground">
       {/* On mobile the sidebar is a sheet, so it needs an opener outside it. */}
       <SidebarTrigger className="size-8 rounded-(--radius-header-item) md:hidden" />
       <Breadcrumb className="px-2">
