@@ -264,8 +264,13 @@ body {
 
 /* ---------- View transitions: sidebar page navigation (slides) ---------- */
 /* Sidebar links tag the navigation nav-forward (down the list) or nav-back (up it).
-   app/(dashboard)/template.tsx maps those types to these classes. Old content slides
-   out one way while new content slides in from the other side. */
+   components/dashboard/page-transition.tsx maps those types to these classes. Old content slides
+   out one way while new content slides in from the other side. The groups are clipped to their
+   own box, so the slide never spills past the content pad. */
+::view-transition-group(.nav-forward),
+::view-transition-group(.nav-back) {
+  clip-path: inset(0);
+}
 ::view-transition-old(.nav-forward) {
   --slide-offset: -60px;
   animation:
